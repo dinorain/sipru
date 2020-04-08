@@ -159,6 +159,7 @@
                 <!-- ============================================================== -->
                 <!-- pageheader -->
                 <!-- ============================================================== -->
+                
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
@@ -178,6 +179,39 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
+
+                <!-- Change Status Modal -->
+                <div class="modal fade" id="changeStatusModal" tabindex="-1" role="dialog" aria-labelledby="changeStatusModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="changeStatusModalLabel">Change status</h5>
+                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </a>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group row">
+                                    <label for="rental_status" class="col-sm-3 col-form-label">Status</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="rental_status">
+                                            <option>In Progress</option>
+                                            <option>Completed</option>
+                                            <option>Cancelled</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
+                                <a href="#" class="btn btn-primary">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <!-- ============================================================== -->
                     <!-- rental activity table  -->
@@ -205,7 +239,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 501 </td>
@@ -213,7 +249,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 502 </td>
@@ -221,7 +259,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 601 </td>
@@ -229,7 +269,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$5.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 610 </td>
@@ -237,7 +279,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-danger mr-1"></span>Cancelled </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 501 </td>
@@ -245,7 +289,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$5.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 503 </td>
@@ -253,7 +299,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 501 </td>
@@ -261,7 +309,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 502 </td>
@@ -269,7 +319,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 601 </td>
@@ -277,7 +329,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$5.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 610 </td>
@@ -285,7 +339,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$2.00</td>
                                                 <td><span class="badge-dot badge-danger mr-1"></span>Cancelled </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>LP 501 </td>
@@ -293,7 +349,9 @@
                                                 <td>27/08/2018 16:30</td>
                                                 <td>$5.00</td>
                                                 <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                <td></td>
+                                                <td>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                </td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -346,7 +404,6 @@
     <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="assets/vendor/multi-select/js/jquery.multi-select.js"></script>
     <script src="assets/libs/js/main-js.js"></script>
-    <script src="assets/libs/js/dashboard-rental.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
