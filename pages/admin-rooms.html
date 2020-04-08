@@ -6,11 +6,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>SIPRU | Rooms</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/libs/css/style2.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
 </head>
 
@@ -36,7 +37,7 @@
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Dashboard</a></li>
                                             <li class="breadcrumb-item active" aria-current="page">Rooms</li>
                                     </ol>
                                 </nav>
@@ -49,7 +50,154 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3 class="text-center">Content goes here!</h3>
+                        <!-- <h3 class="text-center">Content goes here!</h3> -->
+
+                        <div class="text-center"><button id="addRoom" class="add_btn">Add</button></div>
+                        <br>
+                        <!-- Rooms Data View -->
+                        <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <div class="card">
+                                <h3 class="card-header text-center">Rooms Data</h3>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="bg-light">
+                                                <tr class="border-0">
+                                                    <th class="border-0">#</th>
+                                                    <th class="border-0">Room ID</th>
+                                                    <th class="border-0">Room Name</th>
+                                                    <th class="border-0">Seats Quantity</th>
+                                                    <th class="border-0">Price</th>
+                                                    <th class="border-0">Availability</th>
+                                                    <th class="border-0">Available Time</th>
+                                                    <th class="border-0"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>id000001 </td>
+                                                    <td>Room #1 </td>
+                                                    <td class="text-center">50</td>
+                                                    <td>$80.00</td>
+                                                    <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
+                                                    <td>13.00 - 16.00</td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>id000002 </td>
+                                                    <td>Room #2 </td>
+                                                    <td class="text-center">40</td>
+                                                    <td>$180.00</td>
+                                                    <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                    <td>13.00 - 16.00</td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>id000003 </td>
+                                                    <td>Room #3 </td>
+                                                    <td class="text-center">55</td>
+                                                    <td>$820.00</td>
+                                                    <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                    <td>13.00 - 16.00</td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>id000004 </td>
+                                                    <td>Room #4 </td>
+                                                    <td class="text-center">50</td>
+                                                    <td>$340.00</td>
+                                                    <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                    <td>13.00 - 16.00</td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>id000005 </td>
+                                                    <td>Room #5 </td>
+                                                    <td class="text-center">45</td>
+                                                    <td>$90.00</td>
+                                                    <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
+                                                    <td>13.00 - 16.00</td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>id000006 </td>
+                                                    <td>Room #6 </td>
+                                                    <td class="text-center">55</td>
+                                                    <td>$110.00</td>
+                                                    <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
+                                                    <td>13.00 - 16.00</td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Modal -->
+                        <div id="Modal_addRoom" class="modal">
+                            <div class="modalContent">
+                                <span class="closeBtn" id="closeModal_addRoom">&times;</span>
+                                <table>
+                                    <tr>
+                                        <td class="modalTablecolumn">Room Id</td>
+                                        <td class="modalTablecolumn">:</td>
+                                        <td class="modalTablecolumn"><input type="text" class="inputfield"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="modalTablecolumn">Room Name</td>
+                                        <td class="modalTablecolumn">:</td>
+                                        <td class="modalTablecolumn"><input type="text" class="inputfield"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="modalTablecolumn">Seat Quantity</td>
+                                        <td class="modalTablecolumn">:</td>
+                                        <td class="modalTablecolumn"><input type="number" min="0" class="inputfield"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="modalTablecolumn">Price</td>
+                                        <td class="modalTablecolumn">:</td>
+                                        <td class="modalTablecolumn"><input type="number" min="0" class="inputfield"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="modalTablecolumn">Available Time</td>
+                                        <td class="modalTablecolumn">:</td>
+                                        <td class="modalTablecolumn"><input type="text" class="inputfield"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="text-align: center;"  class="modalTablecolumn"><button>Add</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- ================================================================================================================================= -->
+
                     </div>
                 </div>
             </div>
@@ -89,6 +237,15 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
+    <script>
+        document.getElementById("addRoom").onclick = function(){
+            document.getElementById("Modal_addRoom").style.display = "block";
+        }
+
+        document.getElementById("closeModal_addRoom").onclick = function(){
+            document.getElementById("Modal_addRoom").style.display = "none";
+        }
+    </script>
 </body>
  
 </html>

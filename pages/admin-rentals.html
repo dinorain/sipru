@@ -6,11 +6,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>SIPRU | Rentals</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/libs/css/style2.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
 </head>
 
@@ -36,7 +37,7 @@
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Dashboard</a></li>
                                             <li class="breadcrumb-item active" aria-current="page">Rentals</li>
                                     </ol>
                                 </nav>
@@ -49,7 +50,187 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3 class="text-center">Content goes here!</h3>
+                        <!-- <h3 class="text-center">Content goes here!</h3> -->
+
+                        <div class="text-center"><button id="addRental" class="add_btn">Add</button></div>
+                        <br>
+                        <!-- Rentals Data View -->
+                        <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <div class="card">
+                                <h3 class="card-header text-center">Rentals Data</h3>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="bg-light">
+                                                <tr class="border-0">
+                                                    <th class="border-0">#</th>
+                                                    <th class="border-0">Room Name</th>
+                                                    <th class="border-0">Room Id</th>
+                                                    <th class="border-0">Quantity</th>
+                                                    <th class="border-0">Price</th>
+                                                    <th class="border-0">Order Time</th>
+                                                    <th class="border-0">Customer</th>
+                                                    <th class="border-0">Status</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>id000001 </td>
+                                                    <td>Room #1 </td>
+                                                    <td>1</td>
+                                                    <td>$80.00</td>
+                                                    <td>27-08-2018 01:22:12</td>
+                                                    <td>Patricia J. King </td>
+                                                    <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>id000002 </td>
+                                                    <td>Room #2 </td>
+                                                    <td>1</td>
+                                                    <td>$180.00</td>
+                                                    <td>25-08-2018 21:12:56</td>
+                                                    <td>Rachel J. Wicker </td>
+                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>id000003 </td>
+                                                    <td>Room #3 </td>
+                                                    <td>1</td>
+                                                    <td>$820.00</td>
+                                                    <td>24-08-2018 14:12:77</td>
+                                                    <td>Michael K. Ledford </td>
+                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>id000004 </td>
+                                                    <td>Room #4 </td>
+                                                    <td>1</td>
+                                                    <td>$340.00</td>
+                                                    <td>23-08-2018 09:12:35</td>
+                                                    <td>Bobby Dickson </td>
+                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>id000005 </td>
+                                                    <td>Room #5 </td>
+                                                    <td>1</td>
+                                                    <td>$90.00</td>
+                                                    <td>21-08-2018 01:22:12</td>
+                                                    <td>Jason Manstone </td>
+                                                    <td><span class="badge-dot badge-danger mr-1"></span>Failed </td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>id000006 </td>
+                                                    <td>Room #6 </td>
+                                                    <td>1</td>
+                                                    <td>$110.00</td>
+                                                    <td>20-08-2018 01:22:12</td>
+                                                    <td>Peter Patrolus </td>
+                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                    <td>
+                                                        <button>Edit</button>
+                                                        <button><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Modal -->
+                        <div id="Modal_addRental" class="modal">
+                            <div class="modalContent">
+                                <span class="closeBtn" id="closeModal_addRental">&times;</span>
+                                <form style="padding-left: 100px;">
+                                    <div class="form-group row">
+                                        <label for="rental-name" class="col-sm-3 col-form-label">Rental Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control inputfield" id="rental_name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="rental-id" class="col-sm-3 col-form-label">Rental ID</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control inputfield" id="rental_id">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="qty" class="col-sm-3 col-form-label">Quantity</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control inputfield" id="qty">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="price" class="col-sm-3 col-form-label">Price</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control inputfield" id="price">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="order" class="col-sm-3 col-form-label">Order Time</label>
+                                        <div class="col-sm-9">
+                                            <input type="datetime-local" class="form-control inputfield" id="order">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="customer" class="col-sm-3 col-form-label">Customer</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control inputfield" id="customer">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row">
+                                        <label for="rental-status" class="col-sm-3 col-form-label">Status</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control inputfield">
+                                                <option>In Progress</option>
+                                                <option>Completed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <button onclick="return false;" class="add_btn">Add</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ================================================================================================================================= -->
+
                     </div>
                 </div>
             </div>
@@ -89,6 +270,15 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
+    <script>
+        document.getElementById("addRental").onclick = function(){
+            document.getElementById("Modal_addRental").style.display = "block";
+        }
+
+        document.getElementById("closeModal_addRental").onclick = function(){
+            document.getElementById("Modal_addRental").style.display = "none";
+        }
+    </script>
 </body>
  
 </html>
