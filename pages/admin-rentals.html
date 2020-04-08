@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/libs/css/style2.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
+    <link rel="stylesheet" href="../assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
 </head>
 
 <body>
@@ -48,117 +53,341 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <!-- <h3 class="text-center">Content goes here!</h3> -->
 
-                        <div class="text-center"><button id="addRental" class="add_btn">Add</button></div>
-                        <br>
-                        <!-- Rentals Data View -->
-                        <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
-                            <div class="card">
-                                <h3 class="card-header text-center">Rentals Data</h3>
-                                <div class="card-body p-0">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="bg-light">
-                                                <tr class="border-0">
-                                                    <th class="border-0">#</th>
-                                                    <th class="border-0">Room Name</th>
-                                                    <th class="border-0">Room Id</th>
-                                                    <th class="border-0">Quantity</th>
-                                                    <th class="border-0">Price</th>
-                                                    <th class="border-0">Order Time</th>
-                                                    <th class="border-0">Customer</th>
-                                                    <th class="border-0">Status</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>id000001 </td>
-                                                    <td>Room #1 </td>
-                                                    <td>1</td>
-                                                    <td>$80.00</td>
-                                                    <td>27-08-2018 01:22:12</td>
-                                                    <td>Patricia J. King </td>
-                                                    <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>id000002 </td>
-                                                    <td>Room #2 </td>
-                                                    <td>1</td>
-                                                    <td>$180.00</td>
-                                                    <td>25-08-2018 21:12:56</td>
-                                                    <td>Rachel J. Wicker </td>
-                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>id000003 </td>
-                                                    <td>Room #3 </td>
-                                                    <td>1</td>
-                                                    <td>$820.00</td>
-                                                    <td>24-08-2018 14:12:77</td>
-                                                    <td>Michael K. Ledford </td>
-                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>id000004 </td>
-                                                    <td>Room #4 </td>
-                                                    <td>1</td>
-                                                    <td>$340.00</td>
-                                                    <td>23-08-2018 09:12:35</td>
-                                                    <td>Bobby Dickson </td>
-                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>id000005 </td>
-                                                    <td>Room #5 </td>
-                                                    <td>1</td>
-                                                    <td>$90.00</td>
-                                                    <td>21-08-2018 01:22:12</td>
-                                                    <td>Jason Manstone </td>
-                                                    <td><span class="badge-dot badge-danger mr-1"></span>Failed </td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>id000006 </td>
-                                                    <td>Room #6 </td>
-                                                    <td>1</td>
-                                                    <td>$110.00</td>
-                                                    <td>20-08-2018 01:22:12</td>
-                                                    <td>Peter Patrolus </td>
-                                                    <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
+                <!-- Button trigger Add Rental modal -->
+                <a href="#" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addRentalModal">Add Rental</a>
+
+                <!-- Add Rental Modal -->
+                <div class="modal fade" id="addRentalModal" tabindex="-1" role="dialog" aria-labelledby="addRentalModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addRentalModalLabel">Add Rental</h5>
+                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </a>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group row">
+                                        <label for="rental_id" class="col-sm-3 col-form-label">Rental ID</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="rental_id">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="room" class="col-sm-3 col-form-label">Room Rented</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="room">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="renter" class="col-sm-3 col-form-label">Renter</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="renter">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="startdate" class="col-sm-3 col-form-label">Start date</label>
+                                        <div class="col-sm-9">
+                                            <div class="input-group date" id="startdatepicker" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#startdatepicker" />
+                                                <div class="input-group-append" data-target="#startdatepicker" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="enddate" class="col-sm-3 col-form-label">End date</label>
+                                        <div class="col-sm-9">
+                                            <div class="input-group date" id="enddatepicker" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#enddatepicker" />
+                                                <div class="input-group-append" data-target="#enddatepicker" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="price" class="col-sm-3 col-form-label">Price</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="price">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="rental_status" class="col-sm-3 col-form-label">Status</label>
+                                        <div class="col-sm-9">
+                                          <select class="form-control" id="rental_status">
+                                              <option>In Progress</option>
+                                              <option>Completed</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
+                                <a href="#" class="btn btn-primary">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- ============================================================== -->
+                    <!-- rental table  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Rentals</h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered first">
+                                        <thead>
+                                            <tr>
+                                                <th>Rental ID</th>
+                                                <th>Room Rented</th>
+                                                <th>Renter</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Price</th>
+                                                <th>Status</th>
+                                                <th>Date Added</th>
+                                                <th>Date Updated</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>RENT00001 </td>
+                                                <td>LP 503 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00002 </td>
+                                                <td>LP 501 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00003 </td>
+                                                <td>LP 502 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00004 </td>
+                                                <td>LP 601 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$5.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00005 </td>
+                                                <td>LP 610 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Cancelled </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00006 </td>
+                                                <td>LP 501 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$5.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00007 </td>
+                                                <td>LP 503 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00008 </td>
+                                                <td>LP 501 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00009 </td>
+                                                <td>LP 502 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00010 </td>
+                                                <td>LP 601 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$5.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00011 </td>
+                                                <td>LP 610 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$2.00</td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Cancelled </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RENT00012 </td>
+                                                <td>LP 501 </td>
+                                                <td>Charde Marshall</td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>$5.00</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td>27-08-2018 13:30</td>
+                                                <td>27-08-2018 16:30</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -166,72 +395,10 @@
                             </div>
                         </div>
 
-                        <!-- Add Modal -->
-                        <div id="Modal_addRental" class="modal">
-                            <div class="modalContent">
-                                <span class="closeBtn" id="closeModal_addRental">&times;</span>
-                                <form style="padding-left: 100px;">
-                                    <div class="form-group row">
-                                        <label for="rental-name" class="col-sm-3 col-form-label">Rental Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control inputfield" id="rental_name">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="rental-id" class="col-sm-3 col-form-label">Rental ID</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control inputfield" id="rental_id">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="qty" class="col-sm-3 col-form-label">Quantity</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control inputfield" id="qty">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="price" class="col-sm-3 col-form-label">Price</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control inputfield" id="price">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="order" class="col-sm-3 col-form-label">Order Time</label>
-                                        <div class="col-sm-9">
-                                            <input type="datetime-local" class="form-control inputfield" id="order">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="customer" class="col-sm-3 col-form-label">Customer</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control inputfield" id="customer">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group row">
-                                        <label for="rental-status" class="col-sm-3 col-form-label">Status</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control inputfield">
-                                                <option>In Progress</option>
-                                                <option>Completed</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="text-center">
-                                    <button onclick="return false;" class="add_btn">Add</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ================================================================================================================================= -->
-
                     </div>
+                    <!-- ============================================================== -->
+                    <!-- rental table  -->
+                    <!-- ============================================================== -->
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -270,15 +437,23 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
-    <script>
-        document.getElementById("addRental").onclick = function(){
-            document.getElementById("Modal_addRental").style.display = "block";
-        }
-
-        document.getElementById("closeModal_addRental").onclick = function(){
-            document.getElementById("Modal_addRental").style.display = "none";
-        }
-    </script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/vendor/datatables/js/data-table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../assets/vendor/datepicker/moment.js"></script>
+    <script src="../assets/vendor/datepicker/tempusdominus-bootstrap-4.js"></script>
+    <script src="../assets/vendor/datepicker/datepicker.js"></script>
 </body>
  
 </html>

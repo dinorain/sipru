@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/libs/css/style2.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
+
 </head>
 
 <body>
@@ -33,12 +38,11 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
                             <h2 class="pageheader-title">Rooms </h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Rooms</li>
+                                        <li class="breadcrumb-item"><a href="../admin-index.html" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Rooms</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -48,155 +52,391 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <!-- <h3 class="text-center">Content goes here!</h3> -->
 
-                        <div class="text-center"><button id="addRoom" class="add_btn">Add</button></div>
-                        <br>
-                        <!-- Rooms Data View -->
-                        <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
-                            <div class="card">
-                                <h3 class="card-header text-center">Rooms Data</h3>
-                                <div class="card-body p-0">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="bg-light">
-                                                <tr class="border-0">
-                                                    <th class="border-0">#</th>
-                                                    <th class="border-0">Room ID</th>
-                                                    <th class="border-0">Room Name</th>
-                                                    <th class="border-0">Seats Quantity</th>
-                                                    <th class="border-0">Price</th>
-                                                    <th class="border-0">Availability</th>
-                                                    <th class="border-0">Available Time</th>
-                                                    <th class="border-0"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>id000001 </td>
-                                                    <td>Room #1 </td>
-                                                    <td class="text-center">50</td>
-                                                    <td>$80.00</td>
-                                                    <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
-                                                    <td>13.00 - 16.00</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>id000002 </td>
-                                                    <td>Room #2 </td>
-                                                    <td class="text-center">40</td>
-                                                    <td>$180.00</td>
-                                                    <td><span class="badge-dot badge-success mr-1"></span>Available </td>
-                                                    <td>13.00 - 16.00</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>id000003 </td>
-                                                    <td>Room #3 </td>
-                                                    <td class="text-center">55</td>
-                                                    <td>$820.00</td>
-                                                    <td><span class="badge-dot badge-success mr-1"></span>Available </td>
-                                                    <td>13.00 - 16.00</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>id000004 </td>
-                                                    <td>Room #4 </td>
-                                                    <td class="text-center">50</td>
-                                                    <td>$340.00</td>
-                                                    <td><span class="badge-dot badge-success mr-1"></span>Available </td>
-                                                    <td>13.00 - 16.00</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>id000005 </td>
-                                                    <td>Room #5 </td>
-                                                    <td class="text-center">45</td>
-                                                    <td>$90.00</td>
-                                                    <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
-                                                    <td>13.00 - 16.00</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>id000006 </td>
-                                                    <td>Room #6 </td>
-                                                    <td class="text-center">55</td>
-                                                    <td>$110.00</td>
-                                                    <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
-                                                    <td>13.00 - 16.00</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
+                <!-- Button trigger Add Room modal -->
+                <a href="#" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addRoomModal">Add Rooms</a>
+
+                <!-- Add Room Modal -->
+                <div class="modal fade" id="addRoomModal" tabindex="-1" role="dialog" aria-labelledby="addRoomModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addUserModalLabel">Add Room</h5>
+                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </a>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group row">
+                                      <label for="room_name" class="col-sm-3 col-form-label">Name</label>
+                                      <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="room_name">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="size" class="col-sm-3 col-form-label">Size</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="size" value="">
+                                                <option>Small (0-50 people)</option>
+                                                <option>Medium (0-100 people)</option>
+                                                <option>Large (0-200 people)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="price" class="col-sm-3 col-form-label">Price</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="status" class="col-sm-3 col-form-label">Status</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="size" value="">
+                                                <option><span class="badge-dot badge-success mr-1"></span>Available</option>
+                                                <option><span class="badge-dot badge-danger mr-1"></span>Unavailable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="description" class="col-sm-3 col-form-label">Description</label>
+                                        <div class="col-sm-9">
+                                            <textarea  class="form-control" id="description"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
+                                <a href="#" class="btn btn-primary">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- data table  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Rooms</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example" class="table table-striped table-bordered second" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Room ID</th>
+                                                <th>Room Name</th>
+                                                <th>Description</th>
+                                                <th>Size</th>
+                                                <th>Price</th>
+                                                <th>Status</th>
+                                                <th>Date Added</th>
+                                                <th>Date Updated</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0000001</td>
+                                                <td>Room01</td>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000002</td>
+                                                <td>Room02</td>
+                                                <td>Inc. 3 Microphones</td>
+                                                <td>Large</td>
+                                                <td>$12.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000003</td>
+                                                <th>Room03</th>
+                                                <td>Inc. 1 Microphone</td>
+                                                <td>Small</td>
+                                                <td>$7.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000004</td>
+                                                <th>Room04</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000005</td>
+                                                <th>Room05</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000006</td>
+                                                <th>Room06</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000007</td>
+                                                <th>Room07</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000008</td>
+                                                <th>Room08</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000009</td>
+                                                <th>Room09</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000010</td>
+                                                <th>Room10</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000011</td>
+                                                <th>Room11</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000012</td>
+                                                <td>Room12</td>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000013</td>
+                                                <th>Room13</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000014</td>
+                                                <th>Room14</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Available </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000015</td>
+                                                <th>Room15</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0000016</td>
+                                                <th>Room16</th>
+                                                <td>Inc. 2 Microphones</td>
+                                                <td>Medium</td>
+                                                <td>$10.00 / hour</td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Unavailable </td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Add Modal -->
-                        <div id="Modal_addRoom" class="modal">
-                            <div class="modalContent">
-                                <span class="closeBtn" id="closeModal_addRoom">&times;</span>
-                                <table>
-                                    <tr>
-                                        <td class="modalTablecolumn">Room Id</td>
-                                        <td class="modalTablecolumn">:</td>
-                                        <td class="modalTablecolumn"><input type="text" class="inputfield"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="modalTablecolumn">Room Name</td>
-                                        <td class="modalTablecolumn">:</td>
-                                        <td class="modalTablecolumn"><input type="text" class="inputfield"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="modalTablecolumn">Seat Quantity</td>
-                                        <td class="modalTablecolumn">:</td>
-                                        <td class="modalTablecolumn"><input type="number" min="0" class="inputfield"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="modalTablecolumn">Price</td>
-                                        <td class="modalTablecolumn">:</td>
-                                        <td class="modalTablecolumn"><input type="number" min="0" class="inputfield"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="modalTablecolumn">Available Time</td>
-                                        <td class="modalTablecolumn">:</td>
-                                        <td class="modalTablecolumn"><input type="text" class="inputfield"></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" style="text-align: center;"  class="modalTablecolumn"><button>Add</button></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- ================================================================================================================================= -->
 
                     </div>
                 </div>
@@ -237,15 +477,20 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
-    <script>
-        document.getElementById("addRoom").onclick = function(){
-            document.getElementById("Modal_addRoom").style.display = "block";
-        }
-
-        document.getElementById("closeModal_addRoom").onclick = function(){
-            document.getElementById("Modal_addRoom").style.display = "none";
-        }
-    </script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/vendor/datatables/js/data-table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
 </body>
  
 </html>

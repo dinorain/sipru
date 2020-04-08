@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/libs/css/style2.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
+    <link rel="stylesheet" href="../assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
+
 </head>
 
 <body>
@@ -33,11 +39,10 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
                             <h2 class="pageheader-title">Users </h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="../admin-index.html" class="breadcrumb-link">Dashboard</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Users</li>
                                     </ol>
                                 </nav>
@@ -48,166 +53,459 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <!-- <h3 class="text-center">Content goes here!</h3> -->
 
-                        <div class="text-center"><button id="addUser" class="add_btn">Add</button></div>
-                        <br>
-                        <!-- Users Data View -->
-                        <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
-                            <div class="card">
-                                <h3 class="card-header text-center">Users Data</h3>
-                                <div class="card-body p-0">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="bg-light">
-                                                <tr class="border-0">
-                                                    <th class="border-0">#</th>
-                                                    <th class="border-0">ID</th>
-                                                    <th class="border-0">Name</th>
-                                                    <th class="border-0">Username</th>
-                                                    <th class="border-0">Email</th>
-                                                    <th class="border-0">National<br>Identification Number</th>
-                                                    <th class="border-0">Gender</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>010321 </td>
-                                                    <td>Maddy Freudston </td>
-                                                    <td>madfreud</td>
-                                                    <td>maddyfreudston@gmail.com</td>
-                                                    <td class="text-center">030411156324</td>
-                                                    <td>&#9792; Female</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>010322 </td>
-                                                    <td>Sergey Barlbora </td>
-                                                    <td>s_balb</td>
-                                                    <td>s_balb@gmail.com</td>
-                                                    <td class="text-center">030411156386</td>
-                                                    <td>&#9794; Male</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>010323 </td>
-                                                    <td>Uvuvwevwevwe Osas </td>
-                                                    <td>osasishere</td>
-                                                    <td>realosas@gmail.com</td>
-                                                    <td class="text-center">030411156353</td>
-                                                    <td>&#9794; Male</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>010324 </td>
-                                                    <td>Mariana Lorenzo </td>
-                                                    <td>amarillo</td>
-                                                    <td>amarilo111@gmail.com</td>
-                                                    <td class="text-center">030411156333</td>
-                                                    <td>&#9792; Female</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>010325 </td>
-                                                    <td>Krystof Putz </td>
-                                                    <td>kryputz</td>
-                                                    <td>kry_putz@gmail.com</td>
-                                                    <td class="text-center">030411156347</td>
-                                                    <td>&#9794; Male</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>010326 </td>
-                                                    <td>Aritoteles Junior </td>
-                                                    <td>teles</td>
-                                                    <td>aris.to.teles@gmail.com</td>
-                                                    <td class="text-center">030411156381</td>
-                                                    <td>&#9794; Male</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td>010327 </td>
-                                                    <td>Albert Einstein Junior II</td>
-                                                    <td>franken.stein</td>
-                                                    <td>e_mc2@gmail.com</td>
-                                                    <td class="text-center">030411156337</td>
-                                                    <td>&#9794; Male</td>
-                                                    <td>
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
+                <!-- Button trigger Add User modal -->
+                <a href="#" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addUserModal">Add Customer</a>
+
+                <!-- Add User Modal -->
+                <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addUserModalLabel">Add User</h5>
+                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </a>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group row">
+                                      <label for="user_id" class="col-sm-3 col-form-label">User ID</label>
+                                      <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="user_id">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="user_id" class="col-sm-3 col-form-label">Role</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="size" value="">
+                                                <option>Renter</option>
+                                                <option>Administrator</option>
+                                            </select>
+                                        </div>
+                                      </div>
+                                    <div class="form-group row">
+                                      <label for="user_name" class="col-sm-3 col-form-label">Name</label>
+                                      <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="user_name">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="col-sm-3 col-form-label">Email</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="phone_numebr" class="col-sm-3 col-form-label">Phone Number</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="phone_number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="birthdate" class="col-sm-3 col-form-label">Birthdate</label>
+                                        <div class="col-sm-9">
+                                            <div class="input-group date" id="birthdatepicker" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#birthdatepicker" />
+                                                <div class="input-group-append" data-target="#birthdatepicker" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row">
+                                        <label for="address" class="col-sm-3 col-form-label">Address</label>
+                                        <div class="col-sm-9">
+                                            <textarea  class="form-control" id="address"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
+                                <a href="#" class="btn btn-primary">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- data table  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Users</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example" class="table table-striped table-bordered second" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone Number</th>
+                                                <th>Birthdate</th>
+                                                <th>Address</th>
+                                                <th>Date Added</th>
+                                                <th>Date Updated</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>030821800001</th>
+                                                
+                                                <td>Tiger Nixon</td>
+                                                <td>customer1@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>020821800001</th>
+                                                
+                                                <td>Tiger Noxin</td>
+                                                <td>admin1@surel.com</td>
+                                                <td>081234567809</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>020821800002</th>
+                                                
+                                                <td>Lion Noxin</td>
+                                                <td>admin2@surel.com</td>
+                                                <td>081234567810</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800002</th>
+                                                
+                                                <td>Garrett Winters</td>
+                                                <td>customer2@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800003</th>
+                                                
+                                                <td>Ashton Cox</td>
+                                                <td>customer3@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800004</th>
+                                                
+                                                <td>Cedric Kelly</td>
+                                                <td>customer4@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800005</th>
+                                                
+                                                <td>Airi Satou</td>
+                                                <td>customer5@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800006</th>
+                                                
+                                                <td>Brielle Williamson</td>
+                                                <td>customer6@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800007</th>
+                                                
+                                                <td>Herrod Chandler</td>
+                                                <td>customer7@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800008</th>
+                                                
+                                                <td>Rhona Davidson</td>
+                                                <td>customer8@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800009</th>
+                                                
+                                                <td>Colleen Hurst</td>
+                                                <td>customer9@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800010</th>
+                                                
+                                                <td>Sonya Frost</td>
+                                                <td>customer10@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800011</th>
+                                                
+                                                <td>Jena Gaines</td>
+                                                <td>customer11@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800012</th>
+                                                
+                                                <td>Quinn Flynn</td>
+                                                <td>customer12@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800013</th>
+                                                
+                                                <td>Charde Marshall</td>
+                                                <td>customer13@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800014</th>
+                                                
+                                                <td>Haley Kennedy</td>
+                                                <td>customer14@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800015</th>
+                                                
+                                                <td>Tatyana Fitzpatrick</td>
+                                                <td>customer15@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>030821800016</th>
+                                                
+                                                <td>Michael Silva</td>
+                                                <td>customer16@surel.com</td>
+                                                <td>081234567890</td>
+                                                <td>2011/04/25</td>
+                                                <td>Cluster Zoomba</td>
+                                                <td>2011/04/25 13:30</td>
+                                                <td>2011/04/25 13:31</td>
+                                                <td>
+                                                    <div class="btn-group ml-auto">
+                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-light">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Add Modal -->
-                        <div id="Modal_addUser" class="modal">
-                            <div class="modalContent">
-                                <span class="closeBtn" id="closeModal_addUser">&times;</span>
-                                <form style="padding-left: 70px;">
-                                    <div class="form-group row">
-                                        <label for="user-id" class="col-sm-3 col-form-label">User ID</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control inputfield" id="user_id">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group row">
-                                        <label for="user-name" class="col-sm-3 col-form-label">Full Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control inputfield" id="user_name">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="user-category" class="col-sm-3 col-form-label">Category</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control inputfield">
-                                                <option>Customer</option>
-                                                <option>Guest</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="text-center">
-                                    <button onclick="return false;" class="add_btn">Add</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ============================================================================== -->
 
                     </div>
                 </div>
@@ -248,15 +546,23 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
-    <script>
-        document.getElementById("addUser").onclick = function(){
-            document.getElementById("Modal_addUser").style.display = "block";
-        }
-
-        document.getElementById("closeModal_addUser").onclick = function(){
-            document.getElementById("Modal_addUser").style.display = "none";
-        }
-    </script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/vendor/datatables/js/data-table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../assets/vendor/datepicker/moment.js"></script>
+    <script src="../assets/vendor/datepicker/tempusdominus-bootstrap-4.js"></script>
+    <script src="../assets/vendor/datepicker/datepicker.js"></script>
 </body>
  
 </html>
