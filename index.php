@@ -1,1 +1,1 @@
-<?php header( 'Location: /renter-index.html' ) ;  ?>
+<?php header( 'Location: /pages/login.html' ) ;  ?>
