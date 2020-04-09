@@ -136,7 +136,7 @@
                                             <a class="nav-link" href="../renter-index.html">Rooms</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="rentals.html">Rental Activity</a>
+                                            <a class="nav-link" href="rentals.html">My Payments</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="payments.html">Payments</a>
@@ -166,13 +166,12 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Rental Activity</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            <h2 class="pageheader-title">My Payments</h2>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Rental Activity</li>
+                                            <li class="breadcrumb-item active" aria-current="page">My Payments</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -183,12 +182,12 @@
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
 
-                <!-- Change Status Modal -->
+                <!-- Edit Modal -->
                 <div class="modal fade" id="changeStatusModal" tabindex="-1" role="dialog" aria-labelledby="changeStatusModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="changeStatusModalLabel">Change status</h5>
+                                <h5 class="modal-title" id="changeStatusModalLabel">Edit</h5>
                                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </a>
@@ -196,16 +195,25 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group row">
+                                        <div class="col-sm-9">
+                                            Upload payment evidence:
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-9">
+                                            <input type="file" name="fileToUpload" id="fileToUpload">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                     <label for="rental_status" class="col-sm-3 col-form-label">Status</label>
-                                    <div class="col-sm-9">
+                                    <div class="col-sm-">
                                         <select class="form-control" id="rental_status">
-                                            <option>In Progress</option>
-                                            <option>Completed</option>
-                                            <option>Cancelled</option>
+                                            <option>Pending</option>
+                                            <option>Approved</option>
+                                            <option>Rejected</option>
                                         </select>
                                     </div>
                                     </div>
-                                    <p>You will receive an payment invoice if you have completed a rental.</p>
                                 </form>
                             </div>
                             <div class="modal-footer">
@@ -218,143 +226,169 @@
 
                 <div class="row">
                     <!-- ============================================================== -->
-                    <!-- rental activity table  -->
+                    <!-- My Payments table  -->
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Rental Activity</h5>
+                            <h5 class="card-header">My Payments</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
-                                                <th>Room Name</th>
+                                                <th>Payment ID</th>
+                                                <th>Room</th>
+                                                <th>Description</th>
+                                                <th>Cost</th>
                                                 <th>Start Date</th>
                                                 <th>End Date</th>
-                                                <th>Price</th>
                                                 <th>Status</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td>P000000001</td>
                                                 <td>LP 503 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Approved </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000002</td>
                                                 <td>LP 501 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000003</td>
                                                 <td>LP 502 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Pending </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000004</td>
                                                 <td>LP 601 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$5.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Pending </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000005</td>
                                                 <td>LP 610 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-danger mr-1"></span>Cancelled </td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Rejected </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000006</td>
                                                 <td>LP 501 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$5.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Pending </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000007</td>
                                                 <td>LP 503 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Pending </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000008</td>
                                                 <td>LP 501 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-success mr-1"></span>Completed </td>
+                                                <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000009</td>
                                                 <td>LP 502 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Pending </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000010</td>
                                                 <td>LP 601 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$5.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Pending </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000011</td>
                                                 <td>LP 610 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$2.00</td>
-                                                <td><span class="badge-dot badge-danger mr-1"></span>Cancelled </td>
+                                                <td><span class="badge-dot badge-danger mr-1"></span>Rejected </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>P000000012</td>
                                                 <td>LP 501 </td>
+                                                <td>Good</td>
+                                                <td>$20.00</td>
                                                 <td>27/08/2018 13:30</td>
                                                 <td>27/08/2018 16:30</td>
-                                                <td>$5.00</td>
-                                                <td><span class="badge-dot badge-brand mr-1"></span>In Progress </td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span>Pending </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Change status</a>
+                                                    <a class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#changeStatusModal">Edit</a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -366,7 +400,7 @@
 
                     </div>
                     <!-- ============================================================== -->
-                    <!-- rental activity table  -->
+                    <!-- My Payments table  -->
                     <!-- ============================================================== -->
 
                 </div>
